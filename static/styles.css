@@ -1,3 +1,4 @@
+/* set and forgets */
 html {
   font-size: 5vh;
 
@@ -17,6 +18,7 @@ html {
   --trinary1: #6c0837;
   --trinary2: #840d45;
   text-align: left;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -50,6 +52,26 @@ p {
   color: var(--trinary);
 }
 
+main {
+  background-color: var(--primary);
+}
+
+body {
+  margin: 0;
+}
+
+/* Class Selectors */
+.empty_space {
+  width: 100%;
+  height: 20vh;
+  background-color: var(--primary);
+}
+
+.standard {
+  height: 50vh;
+  background-color: var(--primary);
+}
+
 .box {
   border: 2px solid var(--secondary);
   border-radius: 25px;
@@ -59,32 +81,43 @@ p {
   margin: 0 20px 30px 20px;
 }
 
-main {
-  background-color: var(--primary);
+.project {
+  height: 50vh;
+  text-align: center;
+  border: 2px solid var(--secondary);
+  border-radius: 25px;
+  background-color: var(--primary1);
+  box-shadow: 5px 5px 10px var(--primary2);
+  margin: 0 20px 30px 20px;
 }
 
-body {
-  margin: 0;
-}
-
-.empty_space {
-  width: 100%;
-  height: 20vh;
-  background-color: var(--primary);
-}
-
+/* ID Selectors */
 #chunk1 {
   height: 50vh;
-}
-
-.standard {
-  height: 50vh;
-  background-color: var(--primary);
 }
 
 #name {
   text-align: center;
 }
 
-#project_box {
+#navBar {
+  position: fixed;
+  bottom: 77px;
+}
+
+#navBar a p {
+  font-size: 0.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  #project_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+  }
+}
+@media screen and (max-width: 800px) {
+  #project_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+  }
 }

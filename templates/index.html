@@ -2,7 +2,12 @@
 %}
 
 <header>
-  <div class="box">Nav Bar</div>
+  <nav id="navBar">
+    <a href="#"><p>Top</p></a>
+    <a href="#name"><p>About</p></a>
+    <a href="#project_box"><p>Projects</p></a>
+    <a href="#foot"><p>Bottom</p></a>
+  </nav>
 </header>
 <main>
   <div class="standard" style="height: 100vh"></div>
@@ -11,11 +16,18 @@
   </div>
   <div class="empty_space"></div>
   <div class="standard" style="height: 100vh"></div>
-  <div class="empty_space" id="project_box"></div>
+  <div class="empty_space"></div>
+  <div id="project_box">
+    <div class="project">Box1</div>
+    <div class="project">Box2</div>
+    <div class="project">Box3</div>
+    <div class="project">Box4</div>
+  </div>
   <div class="standard"></div>
+  <div class="empty_space"></div>
   <div class="empty_space"></div>
 </main>
 <footer>
-  <div class="box">Footer</div>
+  <div class="box" id="foot">Footer</div>
 </footer>
 {% endblock %}
