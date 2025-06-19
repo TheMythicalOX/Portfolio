@@ -1,11 +1,11 @@
 import React from "react";
 
-const projectBox = `bg-yellow-600 h-full w-full flex group hover:scale-125 transition-all duration-500`;
-const projectCard = `bg-yellow-400 h-[90%] w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
+const projectBox = `bg-back h-full w-full flex group hover:scale-125 transition-all duration-500`;
+const projectCard = `bg-pri h-[90%] w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
 
 const Projects = () => {
   return (
-    <div className="h-full w-full flex bg-blue-600">
+    <div className="h-full w-full flex">
       <div className="flex w-full h-full p-2">
         <a href="#" className={projectBox}>
           <div className={projectCard}>

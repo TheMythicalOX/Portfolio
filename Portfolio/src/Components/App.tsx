@@ -5,22 +5,24 @@ import About from "./About";
 import Contact from "./Contact";
 import Header from "./Header";
 import Footer from "./Footer";
+import Extras from "./Extras";
 
 function App() {
   return (
     <>
-      <div className="h-[100vh] overflow-y-scroll scrollbar-hidden">
-        <div className="h-[200vh] w-full bg-red-500 flex">
-          <div className="fixed">float contact</div>
-          <div className="h-[95%] w-[95vw] bg-blue-400 m-auto grid">
+      <div className="h-[195vh] reative bg-back w-[100vw] text-pritext ">
+        <div className=" h-[195vh] z-25 absolute w-[100vw]">
+          <div className="w-[95vw] h-full grid m-auto">
+            <Extras />
             <Header />
-            <Skills />
             <Projects />
+            <Skills />
             <About />
             <Contact />
             <Footer />
           </div>
         </div>
+        <div className="fixed z-50">float contact</div>
       </div>
     </>
   );
