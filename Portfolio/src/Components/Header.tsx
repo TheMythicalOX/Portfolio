@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   const buttonStyle = `bg-pri m-auto py-3 px-14 text-xl rounded-full linkScroll`;
   return (
-    <div className="h-full w-full grid">
+    <div className="h-full w-full grid z-50">
       <h1 className="text-4xl m-auto">Elijah Cline</h1>
       <div className="flex justify-between ">
         <a className={buttonStyle + " anidelay1"} href="#">

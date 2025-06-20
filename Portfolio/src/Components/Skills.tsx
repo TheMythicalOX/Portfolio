@@ -5,7 +5,7 @@ const Skills = () => {
   const skillCard = `bg-sec h-[90%] w-[95%] m-auto group-hover:h-[20%] transition-all duration-500`;
 
   return (
-    <div className="h-full w-full flex">
+    <div className="h-full w-full z-50 flex">
       <div className="flex w-full h-full p-2">
         <div className={skillBox}>
           <div className={skillCard}>Technologies</div>

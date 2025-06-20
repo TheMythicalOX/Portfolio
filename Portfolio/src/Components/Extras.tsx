@@ -6,8 +6,8 @@ const Extras = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0vw", "110vw"]);
   const rawY = useTransform(
     scrollYProgress,
-    [0, 0.3, 1],
-    ["0vh", "-55vh", "-110vh"]
+    [0, 0.3, 0.5, 0.7, 0.9, 1],
+    ["0vh", "-55vh", "-80vh", "-90vh", "-100vh", "-110vh"]
   );
   const y = useSpring(rawY, {
     stiffness: 80,
@@ -15,13 +15,13 @@ const Extras = () => {
     mass: 0.5,
   });
   return (
-    <div>
+    <div className="z-0">
       <motion.div
-        className="h-20 w-20 bg-accent rounded-full fixed top-[100%] right-[100%] z-2"
+        className="h-20 w-20 bg-accent fixed rounded-full top-[100%] right-[100%] z-1"
         style={{ x, y }}
       />
-      <div className="main fixed z-0 h-[100vh] w-[100vw]"></div>
-      <div className="h-[4px] w-[4px] shadow-lg fixed z-1 top-[50%] left-[50%] bg-back m-auto"></div>
+      <div className="main fixed z-1 h-[100vh] w-[100vw]"></div>
+      <div className="h-[4px] w-[4px] fixed shadow-lg z-1 top-[50%] left-[50%] bg-back m-auto"></div>
     </div>
   );
 };

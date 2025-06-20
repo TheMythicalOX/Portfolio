@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <div className="h-[195vh] reative bg-back w-[100vw] text-pritext ">
-        <div className=" h-[195vh] z-25 absolute w-[100vw]">
-          <div className="w-[95vw] h-full grid m-auto">
+        <div className=" h-[195vh] z-50 relative absolute flex w-[100vw]">
+          <div className="w-[95vw] h-full z-50 grid m-auto">
             <Extras />
             <Header />
             <Projects />
