@@ -6,10 +6,12 @@
   --color-sec: #a34321;
   --color-accent: #f8bc04;
   --color-pritext: #ffe1c8;
+  --color-underline-none: #00000000;
 }
+
 html {
   scroll-behavior: smooth;
-  background-color: var(--color-back);
+  background-color: var(--color-back); 
 }
 .main {
   /* position: fixed; */

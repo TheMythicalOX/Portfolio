@@ -22,7 +22,6 @@ function App() {
             <Footer />
           </div>
         </div>
-        <div className="fixed z-50">float contact</div>
       </div>
     </>
   );

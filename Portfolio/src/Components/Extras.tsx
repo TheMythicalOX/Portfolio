@@ -22,6 +22,7 @@ const Extras = () => {
       />
       <div className="main fixed z-1 h-[100vh] w-[100vw]"></div>
       <div className="h-[4px] w-[4px] fixed shadow-lg z-1 top-[50%] left-[50%] bg-back m-auto"></div>
+      <div className="fixed z-50">float contact</div>
     </div>
   );
 };
