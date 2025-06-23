@@ -1,41 +1,63 @@
-import React from "react";
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
-
+import React, { useEffect, useState } from "react";
 const IP = import.meta.env.VITE_API_SERVER_IP;
 const star = `http://${IP}:3000/src/Assets/star.svg`;
 
 const Extras = () => {
-  const { scrollYProgress } = useScroll();
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
-  const rawY = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.5, 0.7, 0.9, 1],
-    ["0vh", "-60vh", "-85vh", "-95vh", "-105vh", "-110vh"]
-  );
-  const y = useSpring(rawY, {
-    stiffness: 80,
-    damping: 20,
-    mass: 0.5,
-  });
-  const rawX = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.6, 0.8, 1],
-    ["0vh", "55vw", "80vw", "90vw", "100vw", "110vw"]
-  );
-  const x = useSpring(rawX, {
-    stiffness: 80,
-    damping: 20,
-    mass: 0.5,
-  });
+
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  const maxScroll = window.innerHeight * 1; // you can adjust this range
+  const progress = Math.min(scrollY / maxScroll, 1); // 0 to 1
+
+  const x = (progress * 120) -10 ; // percent of screen width
+  const y = ((1 - Math.pow(progress - 1, 2)) * 110) -10; // parabolic arch
+
 
   return (
     <div className="z-0">
-      <motion.image
-        className="fixed top-[100%] right-[100%] z-1"
-        style={{ x, y, rotate }}
-      >
-        <div className="h-[10vh] w-[10vw]"><img src={star} className="h-[10vh] w-[10vw]" alt="" /></div>
-      </motion.image>
+      <div className="h-[10vh] w-[10vw] "><img src={star} className="h-[10vh] w-[10vw] z-5" alt="" style={{
+          position: 'fixed',
+          left: `${x}vw`,
+          bottom: `${y}vh`,
+          transform: 'translate(-50%, 50%)',
+          transition: 'left 0.2s, bottom 0.2s',
+        }} /></div>
+        <div className="h-[4vh] w-[4vh] rounded-full bg-pritext opacity-[80%]" style={{
+          position: 'fixed',
+          left: `${x}vw`,
+          bottom: `${y}vh`,
+          transform: 'translate(-50%, 50%)',
+          transition: 'left 0.25s, bottom 0.25s',
+        }}></div>
+        <div className="h-[3vh] w-[3vh] rounded-full bg-pritext opacity-[65%]" style={{
+          position: 'fixed',
+          left: `${x}vw`,
+          bottom: `${y}vh`,
+          transform: 'translate(-50%, 50%)',
+          transition: 'left 0.275s, bottom 0.275s',
+        }}></div>
+        <div className="h-[2vh] w-[2vh] rounded-full bg-pritext opacity-[50%]" style={{
+          position: 'fixed',
+          left: `${x}vw`,
+          bottom: `${y}vh`,
+          transform: 'translate(-50%, 50%)',
+          transition: 'left 0.3s, bottom 0.3s',
+        }}></div>
+        <div className="h-[1vh] w-[1vh] rounded-full bg-pritext opacity-[50%]" style={{
+          position: 'fixed',
+          left: `${x}vw`,
+          bottom: `${y}vh`,
+          transform: 'translate(-50%, 50%)',
+          transition: 'left 0.325s, bottom 0.325s',
+        }}></div>
       <div className="main fixed z-1 h-[100vh] w-[100vw]"></div>
       <div className="h-[4px] w-[4px] fixed shadow-lg z-1 top-[50%] left-[50%] bg-back m-auto"></div>
       <div className="fixed z-50">float contact</div>
