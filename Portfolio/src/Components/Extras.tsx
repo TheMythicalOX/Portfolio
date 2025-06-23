@@ -14,7 +14,7 @@ const Extras = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const maxScroll = window.innerHeight * 1; // you can adjust this range
+  const maxScroll = window.innerHeight ; // you can adjust this range
   const progress = Math.min(scrollY / maxScroll, 1); // 0 to 1
 
   const x = (progress * 120) -10 ; // percent of screen width
@@ -22,7 +22,7 @@ const Extras = () => {
 
 
   return (
-    <div className="z-0">
+    <div className="z-0 fixed">
       <div className="h-[10vh] w-[10vw] "><img src={star} className="h-[10vh] w-[10vw] z-5" alt="" style={{
           position: 'fixed',
           left: `${x}vw`,
