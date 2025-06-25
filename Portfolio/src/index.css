@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-back: #051427;
+  --color-back: #06182c;
+  --color-backlight: #b86f10;
   --color-pri: #530f1e;
   --color-sec: #a34321;
   --color-accent: #f8bc04;
@@ -9,9 +10,17 @@
   --color-underline-none: #00000000;
 }
 
+.constellationBox {
+  outline-color: #ffe1c893;
+  outline-width: 1px;
+  outline-style: solid;
+  box-shadow: 0 0 5px #ffe1c893;
+}
+
 html {
+  /* color: #b86f10; */
   scroll-behavior: smooth;
-  background-color: var(--color-back); 
+  background-color: var(--color-back);
 }
 .main {
   /* position: fixed; */
@@ -68,6 +77,14 @@ html {
     rotate: 15deg;
   }
 }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes linkScroll {
   from {
@@ -100,6 +117,14 @@ html {
 .linkScroll {
   animation-name: linkScroll;
   animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.starSpin {
+  animation-name: spin;
+  animation-duration: 10s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
