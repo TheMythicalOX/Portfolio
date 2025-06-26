@@ -76,7 +76,8 @@ const Extras = () => {
             transition: "left 0.325s, bottom 0.325s",
           }}
         ></div>
-        <div className="main fixed z-1 h-[100vh] w-[100vw]"></div>
+        <div className="main main1 fixed z-1 h-[100vh] w-[90vw] left-[20%]"></div>
+        <div className="main main2 fixed z-1 h-[90vh] w-[100vw] right-[20%]"></div>
       </div>
       <div className="fixed z-50">float contact</div>
     </div>

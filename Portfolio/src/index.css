@@ -18,9 +18,8 @@
 }
 
 html {
-  /* color: #b86f10; */
   scroll-behavior: smooth;
-  background-color: var(--color-back);
+  background-color: #000;
 }
 .main {
   /* position: fixed; */
@@ -30,6 +29,7 @@ html {
   width: 1px;
   background-color: #fff;
   border-radius: 50%;
+  filter: brightness(10000%);
   box-shadow: -411px -476px #cccccc, 777px -407px #d4d4d4, -387px -477px #fcfcfc,
     -91px -235px #d4d4d4, 491px -460px #f7f7f7, 892px -128px #f7f7f7,
     758px -277px #ededed, 596px 378px #cccccc, 647px 423px whitesmoke,
@@ -64,10 +64,15 @@ html {
     -833px 187px #c4c4c4, 378px 325px whitesmoke, -703px 375px #d6d6d6,
     392px 520px #d9d9d9, -492px -60px #c4c4c4, 759px 288px #ebebeb,
     98px -412px #c4c4c4, -911px -277px #c9c9c9;
-  animation: zoom 20s alternate infinite;
 }
 
-@keyframes zoom {
+.main1 {
+  animation: zoom1 60s alternate infinite;
+}
+.main2 {
+  animation: zoom2 60s alternate-reverse infinite;
+}
+@keyframes zoom1 {
   0% {
     transform: scale(1);
     rotate: 0deg;
@@ -75,6 +80,16 @@ html {
   100% {
     transform: scale(1.5);
     rotate: 15deg;
+  }
+}
+@keyframes zoom2 {
+  0% {
+    transform: scale(1);
+    rotate: 20deg;
+  }
+  100% {
+    transform: scale(1.6);
+    rotate: 30deg;
   }
 }
 @keyframes spin {
