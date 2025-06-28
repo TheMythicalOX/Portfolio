@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="6.1627045mm"
+   height="11.543549mm"
+   viewBox="0 0 6.1627045 11.543549"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4642" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-98.97365,-151.84954)">
+    <path
+       style="color:#000000;fill:#ffe1c8;fill-opacity:1;fill-rule:evenodd;stroke-width:0.1;-inkscape-stroke:none"
+       d="m 104.85623,162.99604 -5.557424,0.0281 5.9e-4,0.1 5.557424,-0.0281 z"
+       id="path798-6-9" />
+    <path
+       style="color:#000000;fill:#ffe1c8;fill-opacity:1;fill-rule:evenodd;stroke-width:0.1;-inkscape-stroke:none"
+       d="m 99.339488,152.09495 -0.1,6e-4 0.02813,5.55742 0.1,-6e-4 z"
+       id="path798-5-1" />
+    <path
+       style="color:#000000;fill:#ffe1c8;fill-opacity:1;fill-rule:evenodd;stroke-width:0.1;-inkscape-stroke:none"
+       d="m 99.368491,157.56725 -0.1,4e-4 0.02813,5.55742 0.1,-4e-4 z"
+       id="path798-35-2"
+       inkscape:export-filename="path798-35.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffe1c8;fill-opacity:1;fill-rule:evenodd;stroke:#ffe1c8;stroke-width:0.284667;stroke-opacity:1"
+       id="path4640-97"
+       cx="99.287392"
+       cy="152.16328"
+       r="0.17140454" />
+    <circle
+       style="fill:#ffe1c8;fill-opacity:1;fill-rule:evenodd;stroke:#ffe1c8;stroke-width:0.284667;stroke-opacity:1"
+       id="path4640-3"
+       cx="104.82262"
+       cy="163.04842"
+       r="0.17140454"
+       inkscape:export-filename="Lsvg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffe1c8;fill-opacity:1;fill-rule:evenodd;stroke:#ffe1c8;stroke-width:0.284667;stroke-opacity:1"
+       id="path4640-0"
+       cx="99.345894"
+       cy="163.07936"
+       r="0.17140454" />
+  </g>
+</svg>
