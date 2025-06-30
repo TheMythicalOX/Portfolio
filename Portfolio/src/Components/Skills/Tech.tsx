@@ -1,6 +1,4 @@
 import React from "react";
-import ConstellationBox from "../Parts/ConstellationBox";
-
 const Tech = () => {
   const techs = [
     { name: "React", link: `` },

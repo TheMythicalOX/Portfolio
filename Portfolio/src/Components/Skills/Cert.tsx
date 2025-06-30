@@ -1,6 +1,60 @@
 import React from "react";
 
+const certCard = `w-[22vw] m-auto relative flex flex-wrap constellationBox `;
+const certName = `w-full m-auto text-center`;
+const certImg = `m-auto`;
+const certDate = `w-full m-auto text-center`;
+const certDesc = `w-full m-auto text-center`;
+const certBlur = `absolute m-auto -inset-2 rounded-lg bg-gradient-to-b from-black to-sec opacity-[20%] blur`;
+
 const Cert = () => {
-  return <div className="h-full w-full bg-blue-700/25 flex z-50"> Cert</div>;
+  return (
+    <div className="h-full w-full flex z-50">
+      <div className={certCard}>
+        <h2 className={certName}>CCST</h2>
+        <img className={certImg} src="" alt="" />
+        <h3 className={certDate}>2025</h3>
+        <p className={certDesc}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
+          est odio! Magni debitis soluta officiis saepe quidem doloremque! At
+          optio corrupti tempora. Iure, labore saepe!
+        </p>
+        <div className={certBlur} />
+      </div>
+      <div className={certCard}>
+        <h2 className={certName}>FTTH Fiber Optic</h2>
+        <img className={certImg} src="" alt="" />
+        <h3 className={certDate}>2024</h3>
+        <p className={certDesc}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
+          est odio! Magni debitis soluta officiis saepe quidem doloremque! At
+          optio corrupti tempora. Iure, labore saepe!
+        </p>
+        <div className={certBlur} />
+      </div>
+      <div className={certCard}>
+        <h2 className={certName}>Linux</h2>
+        <img className={certImg} src="" alt="" />
+        <h3 className={certDate}>2025</h3>
+        <p className={certDesc}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
+          est odio! Magni debitis soluta officiis saepe quidem doloremque! At
+          optio corrupti tempora. Iure, labore saepe!
+        </p>
+        <div className={certBlur} />
+      </div>
+      <div className={certCard}>
+        <h2 className={certName}>CS50</h2>
+        <img className={certImg} src="" alt="" />
+        <h3 className={certDate}>2023</h3>
+        <p className={certDesc}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
+          est odio! Magni debitis soluta officiis saepe quidem doloremque! At
+          optio corrupti tempora. Iure, labore saepe!
+        </p>
+        <div className={certBlur} />
+      </div>
+    </div>
+  );
 };
 export default Cert;
