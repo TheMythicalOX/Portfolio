@@ -10,6 +10,10 @@
   --color-underline-none: #00000000;
 }
 
+.nameBlur {
+  filter: drop-shadow(03px 0px 15px var(--color-accent));
+}
+
 .cursor-circle{
   outline: 2px solid #ffe1c893;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import ConstellationBox from "../Parts/ConstellationBox";
 
 const Tech = () => {
   const techs = [
@@ -6,6 +7,7 @@ const Tech = () => {
     { name: "React Native", link: `` },
     { name: "TypeScript", link: `` },
     { name: "JavaScript", link: `` },
+    { name: "WordPress", link: `` },
     { name: "C/C++", link: `` },
     { name: "SQL", link: `` },
     { name: "Docker", link: `` },
@@ -16,25 +18,31 @@ const Tech = () => {
     { name: "HTML", link: `` },
     { name: "Android Studio", link: `` },
     { name: "GIT", link: `` },
+    { name: "Linux", link: `` },
+    { name: "Windows", link: `` },
+    { name: "VMWare", link: `` },
+    { name: "VSCode", link: `` },
+    { name: "Visual Studio", link: `` },
   ];
 
   const list = (
-    <div>
+    <div className="flex flex-wrap justify-around gap-20">
       {techs &&
         techs.map((item) => {
           return (
-            <div>
-              <h2>{item.name}</h2>
-              <img src={item.link} alt="" />
-            </div>
+              <div className="relative constellationBox p-2 flex m-auto ">
+                <h2 className="m-auto">{item.name}</h2>
+                <img className="m-auto" src={item.link} alt="" />
+                <div className="absolute m-auto -inset-2 rounded-lg bg-gradient-to-b from-back to-accent opacity-[20%] blur" />
+              </div>
           );
         })}
     </div>
   );
 
   return (
-    <div className="h-full w-full bg-cyan-700/25 flex flex-wrap z-50 justify-around">
-      <h1 className="m-auto w-full">Technologies</h1>
+    <div className="h-fit w-full flex flex-wrap z-50 justify-around">
+      <h1 className="m-auto w-full text-center">Technologies</h1>
       {list}
     </div>
   );

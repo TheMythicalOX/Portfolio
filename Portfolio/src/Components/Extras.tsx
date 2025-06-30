@@ -89,7 +89,6 @@ const Extras = () => {
         <div className="main main1 fixed z-1 h-[100vh] w-[90vw] left-[20%]"></div>
         <div className="main main2 fixed scale-75 z-1 h-[90vh] w-[100vw] right-[20%]"></div>
       </div>
-
       <div className="fixed z-50">float contact</div>
       <div
         className="h-[1vh] w-[1vh] bg-pritext/75 fixed rounded-full"
