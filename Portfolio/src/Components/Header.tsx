@@ -1,5 +1,6 @@
 import React from "react";
 import ConstellationRounded from "./Parts/ConstellationRounded";
+import { motion } from "motion/react";
 
 const IP = import.meta.env.VITE_API_SERVER_IP;
 const E = `http://${IP}:3000/src/Assets/E.svg`;
@@ -12,17 +13,29 @@ const H = `http://${IP}:3000/src/Assets/H.svg`;
 const Header = () => {
   const buttonStyle = `bg-pri/25 constellationBox relative shadow-lg shadow-[#555]/50 active:scale-[90%] m-auto py-3 px-14 group text-xl rounded-full linkScroll hover:scale-125 transition duration-200`;
   const textStyle = `transition duration-500 group-hover:decoration-accent decoration-underline-none underline `;
+  const constName = `h-[30vh] m-auto linkScroll anidelay`;
   return (
-    <div className="h-[100vh] w-full flex flex-wrap justify-center z-50">
-      <div className="flex w-full justify-around opacity-[75%]">
-        <img src={E} alt="" />
-        <img src={L} alt="" />
-        <img src={I} alt="" />
-        <img src={J} className="pl-6" alt="" />
-        <img src={A} alt="" />
-        <img src={H} alt="" />
-      </div>
-      <h1 className="text-4xl w-full text-center m-auto">Cline</h1>
+    <motion.div className="h-[100vh] w-full relative flex flex-wrap justify-center z-50">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.75 }}
+        transition={{ duration: 10, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0 }}
+        className="flex w-[70%] m-auto justify-around "
+      >
+        <img src={E} alt="" className={constName + "2"} />
+        <img src={L} alt="" className={constName + "3"} />
+        <img src={I} alt="" className={constName + "1"} />
+        <img src={J} alt="" className={constName + "4"} />
+        <img src={A} alt="" className={constName + "5"} />
+        <img src={H} alt="" className={constName + "6"} />
+      </motion.div>
+      <h1 className="text-4xl w-full opacity-[50%] text-center m-auto">
+        Cline
+      </h1>
+      <h1 className="text-4xl w-full opacity-[50%] text-center m-auto">
+        Full Stack Developer
+      </h1>
       <div className="flex w-full justify-between ">
         <a className={buttonStyle + " anidelay1"} href="#">
           <ConstellationRounded />
@@ -49,7 +62,7 @@ const Header = () => {
           <div className={textStyle}>other5</div>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Header;

@@ -9,9 +9,19 @@ const Extras = () => {
     setScrollY(window.scrollY);
   };
 
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const updateMousePosition = (e: { clientX: number; clientY: number }) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", updateMousePosition);
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   const maxScroll = window.innerHeight; // you can adjust this range
   const progress = Math.min(scrollY / maxScroll, 1); // 0 to 1
@@ -79,7 +89,28 @@ const Extras = () => {
         <div className="main main1 fixed z-1 h-[100vh] w-[90vw] left-[20%]"></div>
         <div className="main main2 fixed scale-75 z-1 h-[90vh] w-[100vw] right-[20%]"></div>
       </div>
+
       <div className="fixed z-50">float contact</div>
+      <div
+        className="h-[1vh] w-[1vh] bg-pritext/75 fixed rounded-full"
+        style={{
+          position: "fixed",
+          left: mousePosition.x,
+          top: mousePosition.y,
+          transform: "translate(-50%, -50%)",
+          pointerEvents: "none",
+        }}
+      />
+      <div
+        className="h-[7vh] w-[7vh] fixed rounded-full cursor-circle"
+        style={{
+          position: "fixed",
+          left: mousePosition.x,
+          top: mousePosition.y,
+          transform: "translate(-50%, -50%)",
+          pointerEvents: "none",
+        }}
+      />
     </div>
   );
 };

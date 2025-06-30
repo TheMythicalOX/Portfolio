@@ -10,6 +10,10 @@
   --color-underline-none: #00000000;
 }
 
+.cursor-circle{
+  outline: 2px solid #ffe1c893;
+}
+
 .constellationBox {
   outline-color: #ffe1c893;
   outline-width: 1px;
@@ -19,7 +23,7 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #000;
+  background: #000000;
 }
 .main {
   /* position: fixed; */
