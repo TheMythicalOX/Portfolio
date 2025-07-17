@@ -1,15 +1,11 @@
 import React from "react";
 import Tech from "./Skills/Tech";
 import Cert from "./Skills/Cert";
-import Frame from "./Skills/Frame";
-import School from "./Skills/School";
 const Skills = () => {
   return (
-    <div className="h-[95vh] w-full z-50 flex flex-wrap">
+    <div className="h-[95vh] cursor-none w-full pb-40 flex flex-wrap">
       <Tech />
       <Cert />
-      <Frame />
-      <School />
     </div>
   );
 };

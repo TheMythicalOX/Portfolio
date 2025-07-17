@@ -26,6 +26,7 @@
 }
 
 html {
+  cursor: none;
   scroll-behavior: smooth;
   background: #000000;
 }

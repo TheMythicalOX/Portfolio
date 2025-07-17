@@ -11,11 +11,11 @@ const A = `http://${IP}:3000/src/Assets/A.svg`;
 const H = `http://${IP}:3000/src/Assets/H.svg`;
 
 const Header = () => {
-  const buttonStyle = `bg-pri/25 constellationBox relative shadow-lg shadow-[#555]/50 active:scale-[90%] m-auto py-3 px-14 group text-xl rounded-full linkScroll hover:scale-125 transition duration-200`;
+  const buttonStyle = `bg-pri/25 cursor-none constellationBox relative shadow-lg shadow-[#555]/50 active:scale-[90%] m-auto py-3 px-14 group text-xl rounded-full linkScroll hover:scale-125 transition duration-200`;
   const textStyle = `transition duration-500 group-hover:decoration-accent decoration-underline-none underline `;
-  const constName = `h-[30vh] m-auto nameBlur linkScroll anidelay`;
+  const constName = `h-[15vw] m-auto nameBlur linkScroll anidelay`;
   return (
-    <motion.div className="h-[100vh] w-full relative flex flex-wrap justify-center z-50">
+    <motion.div className="h-[100vh] w-full flex flex-wrap justify-center z-50">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.60 }}
