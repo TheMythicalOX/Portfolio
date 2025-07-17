@@ -8,10 +8,12 @@ import Extras from "./Extras";
 
 function App() {
   return (
-    <>
-      <div className="h-fit w-[100vw] overflow-x-clip text-pritext ">
+    <div className="relative">
+      <div className="bg-linear-to-tr to-back/100 from-black h-[100vh] w-[100vw] z-5 absoulute top-0"></div>
+      <div className="bg-linear-to-bl to-back/100 from-black h-[100vh] w-[100vw] z-5 absoulute top-[100vh] blur"></div>
+      <div className="h-fit top-0 w-[100vw] absolute z-50 overflow-x-clip text-pritext ">
         <div className=" h-full flex w-[100vw]">
-          <div className="w-[95vw] relative h-full flex flex-wrap m-auto">
+          <div className="w-full relative h-full flex flex-wrap m-auto">
             <Extras />
             <Header />
             <About />
@@ -21,7 +23,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
