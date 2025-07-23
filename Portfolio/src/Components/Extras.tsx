@@ -24,14 +24,14 @@ const Extras = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const maxScroll = window.innerHeight; // you can adjust this range
-  const progress = Math.min(scrollY / maxScroll, 1); // 0 to 1
+  const maxScroll = window.innerHeight * 3;
+  const progress = Math.min(scrollY / maxScroll, 1);
 
-  const x = progress * 120 - 10; // percent of screen width
-  const y = (1 - Math.pow(progress - 1, 2)) * 110 - 10; // parabolic arch
+  const x = progress * 120 - 10;
+  const y = (1 - Math.pow(progress - 1, 2)) * 110 - 10;
 
   return (
-    <div className="cursor-none fixed w-full">
+    <div className="fixed w-full">
       <div className="cursor-none opacity-[50%]">
         <div className="cursor-none h-[10vh] w-[10vw]">
           <img
@@ -90,14 +90,7 @@ const Extras = () => {
         <div className="main main1 cursor-none fixed z-1 h-[100vh] w-[90vw] left-[20%]"></div>
         <div className="main main2 cursor-none fixed scale-75 z-1 h-[90vh] w-[100vw] right-[20%]"></div>
       </div>
-      <div className="z-50 fixed">
-        <a href="/#" className="group">
-          <div className="bg-pri/25 z-50  group constellationBox rounded-md relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500">
-            <h1 className="m-auto z-50">Contact</h1>
-            <ConstellationBox />
-          </div>
-        </a>
-      </div>
+
       <div
         className="h-[1vh] cursor-none w-[1vh] bg-pritext/75 fixed rounded-full"
         style={{

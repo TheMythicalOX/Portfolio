@@ -19,7 +19,7 @@ const Header = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.6 }}
-        transition={{ duration: 10, ease: "easeInOut" }}
+        transition={{ duration: 5, ease: "easeInOut" }}
         viewport={{ once: true, amount: 0 }}
         className="flex w-[70%] m-auto justify-around "
       >
