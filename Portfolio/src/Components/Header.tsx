@@ -37,7 +37,10 @@ const Header = () => {
         Full Stack Developer
       </h1>
       <div className="flex w-full justify-between ">
-        <a className={buttonStyle + " anidelay1"} href="#">
+        <a
+          className={buttonStyle + " anidelay1"}
+          href="https://github.com/TheMythicalOX"
+        >
           <ConstellationRounded />
           <div className={textStyle}>GitHub</div>
         </a>

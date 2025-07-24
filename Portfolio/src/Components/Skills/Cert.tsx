@@ -1,6 +1,6 @@
 import React from "react";
 
-const certCard = `w-[22vw] m-auto relative flex flex-wrap constellationBox `;
+const certCard = `w-[20vw] m-auto relative flex  flex-wrap constellationBox `;
 const certName = `w-full m-auto text-center`;
 const certImg = `m-auto`;
 const certDate = `w-full m-auto text-center`;
@@ -10,7 +10,7 @@ const certBlur = `absolute m-auto -inset-2 rounded-lg bg-gradient-to-b from-blac
 const Cert = () => {
   return (
     <div className="h-[40%] pt-20 w-full cursor-none flex flex-wrap z-50">
-      <h1 className="m-auto w-full text-4xl text-center">Certifications</h1>
+      <h1 className="m-auto w-full my-10 text-4xl text-center">Certifications</h1>
       <div className={certCard}>
         <h2 className={certName}>CCST</h2>
         <img className={certImg} src="#" alt="" />

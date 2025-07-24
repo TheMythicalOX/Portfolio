@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ConstellationBox from "./Parts/ConstellationBox";
 const IP = import.meta.env.VITE_API_SERVER_IP;
 const star = `http://${IP}:3000/src/Assets/star.svg`;
 
