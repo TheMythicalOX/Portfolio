@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "motion/react";
 const IP = import.meta.env.VITE_API_SERVER_IP;
 const star = `http://${IP}:3000/src/Assets/star.svg`;
+const source = `http://${IP}:3000/src/Assets/`;
 
 const Extras = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -9,17 +11,10 @@ const Extras = () => {
     setScrollY(window.scrollY);
   };
 
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    const updateMousePosition = (e: { clientX: number; clientY: number }) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
 
-    window.addEventListener("mousemove", updateMousePosition);
     return () => {
-      window.removeEventListener("mousemove", updateMousePosition);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -30,7 +25,36 @@ const Extras = () => {
   const y = (1 - Math.pow(progress - 1, 2)) * 110 - 10;
 
   return (
-    <div className="fixed w-full">
+    <div className="w-full">
+      <div className="h-[100vh] mt-[100vh] absolute nebulaMove blur-xs">
+        <img
+          className="opacity-[25%]"
+          src={source + "nebula.jpg"}
+          alt="nebula"
+        />
+      </div>
+      <div className="bg-linear-to-tr to-back/100 from-black h-[100vh] w-[100vw] z-5 absoulute top-0"></div>
+      <motion.div
+        initial={{ scale: 0.5, opacity: 0.01 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 4, ease: "easeInOut" }}
+        viewport={{ once: false, amount: 0.1 }}
+        className="h-[200vh] w-[100vw] relative absolute mt-[235vh] opacity-[75%] blur-[3px]"
+      >
+        <div className="h-[100vh] overflow-clip absolute relative">
+          <div className="blackHole h-[200vh] w-[100vw] z-5" />
+        </div>
+        <div className="h-[100vh] w-[100vw] overflow-clip absolute relative">
+          <motion.div
+            initial={{ perspective: 75, rotateX: -75, opacity: 0 }}
+            whileInView={{ perspective: 75, rotateX: -75, opacity: 1 }}
+            transition={{ duration: 4, ease: "easeInOut" }}
+            viewport={{ once: false, amount: 0.1 }}
+            className="blackHoleRing h-[200vh] w-[100vw] absolute -translate-y-[100vh] z-15"
+          ></motion.div>
+          <div className="blackHole h-[200vh] w-[100vw] absolute -translate-y-[100vh] z-5"></div>
+        </div>
+      </motion.div>
       <div className="cursor-none opacity-[50%]">
         <div className="cursor-none h-[10vh] w-[10vw]">
           <img
@@ -89,27 +113,6 @@ const Extras = () => {
         <div className="main main1 cursor-none fixed z-1 h-[100vh] w-[90vw] left-[20%]"></div>
         <div className="main main2 cursor-none fixed scale-75 z-1 h-[90vh] w-[100vw] right-[20%]"></div>
       </div>
-
-      <div
-        className="h-[1vh] cursor-none w-[1vh] bg-pritext/75 fixed rounded-full"
-        style={{
-          position: "fixed",
-          left: mousePosition.x,
-          top: mousePosition.y,
-          transform: "translate(-50%, -50%)",
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        className="h-[7vh] cursor-none w-[7vh] fixed rounded-full cursor-circle"
-        style={{
-          position: "fixed",
-          left: mousePosition.x,
-          top: mousePosition.y,
-          transform: "translate(-50%, -50%)",
-          pointerEvents: "none",
-        }}
-      />
     </div>
   );
 };

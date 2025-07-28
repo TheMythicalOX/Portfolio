@@ -47,12 +47,8 @@
   );
 }
 .test2 {
-  background: #e8a62c;
-  background: linear-gradient(
-    0deg,
-    rgba(232, 166, 44, 0.78) 0%,
-    rgba(0, 0, 0, 1) 29%
-  );
+  background: #f8ca85b6;
+  background: linear-gradient(0deg, #f8ca85b6 0%, rgba(0, 0, 0, 1) 29%);
 }
 .nameBlur {
   filter: drop-shadow(03px 0px 15px var(--color-accent));
@@ -162,6 +158,16 @@ html {
     translate: 0 5px;
   }
 }
+@keyframes wiggle1 {
+  from {
+    transform: scale(0.95);
+    rotate: 0deg;
+  }
+  to {
+    translate: scale(1.05);
+    rotate: 2deg;
+  }
+}
 
 .anidelay1 {
   animation-delay: 0ms;
@@ -180,6 +186,10 @@ html {
 }
 .anidelay6 {
   animation-delay: 0ms;
+}
+
+.nebulaMove {
+  animation: wiggle1 30s alternate-reverse infinite;
 }
 
 .linkScroll {
