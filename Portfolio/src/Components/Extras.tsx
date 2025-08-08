@@ -69,7 +69,7 @@ const Extras = () => {
         <div className="cursor-none h-[10vh] w-[10vw]">
           <img
             src={star}
-            className="h-[4vh] cursor-none z-5 starSpin"
+            className="h-[4vh] cursor-none m-auto z-5 starSpin"
             alt=""
             style={{
               position: "fixed",

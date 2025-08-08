@@ -1,23 +1,63 @@
 import React from "react";
 import { motion } from "motion/react";
 import ConstellationBox from "./Parts/ConstellationBox";
+import { useWindowDimensions } from "./App";
 
 const IP = import.meta.env.VITE_API_SERVER_IP;
 const source = `http://${IP}:3000/src/Assets/`;
 
-const iconStyle = `w-[4vw] max-w-[80px] p-2`;
-
-const projectBox = ` h-[24%] cursor-none w-full cursor-none flex justify-around`;
-const projectBack = `w-[55%] cursor-none hover:scale-[110%] transition-all duration-500`;
-const projectText = `w-[30%] cursor-none flex flex-wrap justify-between m-auto `;
-const projectCard = `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
-const projectImage = `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
-
 const Projects = () => {
+  const { width, height } = useWindowDimensions();
+
+  let mainBox = ``;
+  let titleStyle = ``;
+  let boxBox = ``;
+  let iconStyle = ``;
+  let projectBox = ``;
+  let projectBack = ``;
+  let projectText = ``;
+  let projectCard = ``;
+  let projectImage = ``;
+
+  if (height >= 850 && width >= 1375) {
+    // big screen styles
+    mainBox = `h-[350vh] w-full pb-14 cursor-none flex flex-wrap z-25`;
+    titleStyle = `m-auto text-center w-full pb-10 text-4xl`;
+    boxBox = `flex flex-wrap cursor-none w-full h-full p-2`;
+    iconStyle = `w-[4vw] max-w-[80px] p-2`;
+    projectBox = `h-[24%] cursor-none w-full cursor-none flex justify-around`;
+    projectBack = `w-[55%] cursor-none hover:scale-[110%] transition-all duration-500`;
+    projectText = `w-[30%] cursor-none flex flex-wrap justify-between m-auto `;
+    projectCard = `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
+    projectImage = `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
+  } else if (height <= 950 || width <= 450 || width <= height) {
+    // mobile styles
+    mainBox = `h-[350vh] w-full pb-14 cursor-none flex flex-wrap z-25`;
+    titleStyle = `m-auto text-center w-full pb-10 text-4xl`;
+    boxBox = `flex flex-wrap cursor-none w-full h-full p-2`;
+    iconStyle = `w-[4vw] max-w-[80px] p-2`;
+    projectBox = `h-[24%] cursor-none w-full cursor-none flex justify-around`;
+    projectBack = `w-[55%] cursor-none hover:scale-[110%] transition-all duration-500`;
+    projectText = `w-[30%] cursor-none flex flex-wrap justify-between m-auto `;
+    projectCard = `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
+    projectImage = `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
+  } else {
+    // mid screen styles
+    mainBox = `h-[500vh] w-full pb-14 cursor-none flex flex-wrap z-25`;
+    titleStyle = `m-auto text-center w-full pb-10 text-4xl`;
+    boxBox = `flex flex-wrap cursor-none w-full h-full p-2`;
+    iconStyle = `w-[6vw] max-w-[80px] p-2`;
+    projectBox = `h-[24%] cursor-none w-full cursor-none flex flex-wrap justify-around`;
+    projectBack = `w-[100%] h-[75%] cursor-none hover:scale-[110%] transition-all duration-500`;
+    projectText = `w-[100%] p-10 cursor-none flex flex-wrap justify-between m-auto `;
+    projectCard = `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
+    projectImage = `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
+  }
+
   return (
-    <div className="h-[350vh] w-full pb-14 cursor-none flex flex-wrap z-25">
-      <h1 className="m-auto text-center w-full pb-10 text-4xl">Projects</h1>
-      <div className="flex flex-wrap cursor-none w-full h-full p-2">
+    <div className={mainBox}>
+      <h1 className={titleStyle}>Projects</h1>
+      <div className={boxBox}>
         <motion.div
           initial={{ opacity: 0, x: -500, scale: 0.6 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}

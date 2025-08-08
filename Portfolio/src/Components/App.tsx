@@ -43,7 +43,7 @@ function App() {
     // big screen styles
     portBox = `relative max-w-[1920px] h-full m-auto`;
     mainBox = `h-fit top-0 max-w-[1920px] z-50 absolute overflow-x-clip text-pritext `;
-    secBox = `h-fit flex max-w-[1920px]`;
+    secBox = `h-fit flex justify-center max-w-[1920px]`;
     triBox = `w-[85%] relative h-fit flex flex-wrap m-auto`;
   } else if (height <= 950 || width <= 450 || width <= height) {
     // mobile styles
@@ -55,8 +55,8 @@ function App() {
     // mid screen styles
     portBox = `relative w-full h-full`;
     mainBox = `h-fit text-pritext absolute top-0 z-50`;
-    secBox = `h-fit flex max-w-[1920px]`;
-    triBox = `w-[85%] relative h-fit flex flex-wrap m-auto`;
+    secBox = `h-fit flex justify-center max-w-[1920px]`;
+    triBox = `w-[85%] overflow-clip relative h-fit flex flex-wrap m-auto`;
   }
 
   return (

@@ -1,5 +1,29 @@
 import React from "react";
+import { useWindowDimensions } from "../App";
 const Tech = () => {
+  const { width, height } = useWindowDimensions();
+
+  let mainBox = ``;
+  let titleStyle = ``;
+  let itemsBox = ``;
+
+  if (height >= 850 && width >= 1375) {
+    // big screen styles
+    mainBox = `h-[30%] w-full flex flex-wrap z-50 justify-around`;
+    titleStyle = `m-auto w-full text-4xl pb-10 text-center`;
+    itemsBox = `flex flex-wrap cursor-none justify-around gap-20`;
+  } else if (height <= 950 || width <= 450 || width <= height) {
+    // mobile styles
+    mainBox = `h-[30%] w-full flex flex-wrap z-50 justify-around`;
+    titleStyle = `m-auto w-full text-4xl pb-10 text-center`;
+    itemsBox = `flex flex-wrap cursor-none justify-around gap-20`;
+  } else {
+    // mid screen styles
+    mainBox = `h-[30%] w-full flex flex-wrap z-50 justify-around`;
+    titleStyle = `m-auto w-full text-4xl pb-20 text-center`;
+    itemsBox = `flex flex-wrap cursor-none justify-around gap-20`;
+  }
+
   const IP = import.meta.env.VITE_API_SERVER_IP;
   const source = `http://${IP}:3000/src/Assets/`;
   const techs = [
@@ -25,7 +49,7 @@ const Tech = () => {
   ];
 
   const list = (
-    <div className="flex flex-wrap cursor-none justify-around gap-20">
+    <div className={itemsBox}>
       {techs &&
         techs.map((item) => {
           return (
@@ -47,8 +71,8 @@ const Tech = () => {
   );
 
   return (
-    <div className="h-[30%] w-full flex flex-wrap z-50 justify-around">
-      <h1 className="m-auto w-full text-4xl pb-10 text-center">Technologies</h1>
+    <div className={mainBox}>
+      <h1 className={titleStyle}>Technologies</h1>
       {list}
     </div>
   );

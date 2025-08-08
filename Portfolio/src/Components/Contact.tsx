@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ConstellationBox from "./Parts/ConstellationBox";
+import { useWindowDimensions } from "./App";
 
 const Contact = () => {
   const [useEmail, setEmail] = useState("");
@@ -12,11 +13,23 @@ const Contact = () => {
     setText("");
   };
 
+  const { width, height } = useWindowDimensions();
+
+  let mainBox = ``;
+
+  if (height >= 850 && width >= 1375) {
+    // big screen styles
+    mainBox = `w-[60%] z-50 m-auto relative constellationBox flex flex-wrap bg-amber-700/15 mb-[20vh] h-fit`;
+  } else if (height <= 950 || width <= 450 || width <= height) {
+    // mobile styles
+    mainBox = `w-[60%] z-50 m-auto relative constellationBox flex flex-wrap bg-amber-700/15 mb-[20vh] h-fit`;
+  } else {
+    // mid screen styles
+    mainBox = `w-[95%] z-50 m-auto relative constellationBox flex flex-wrap bg-amber-700/15 mb-[20vh] h-fit`;
+  }
+
   return (
-    <div
-      id="contact"
-      className="w-[60%] z-50 m-auto relative constellationBox flex flex-wrap bg-amber-700/15 mb-[20vh] h-fit"
-    >
+    <div id="contact" className={mainBox}>
       <ConstellationBox />
       <h1 className="m-auto text-center w-full text-center pt-10 text-2xl">
         Get In Touch
