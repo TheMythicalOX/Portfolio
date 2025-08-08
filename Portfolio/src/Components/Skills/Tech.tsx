@@ -34,7 +34,11 @@ const Tech = () => {
               className="relative constellationBox p-2 flex justify-around m-auto "
             >
               <h2 className="m-auto pr-2">{item.name}</h2>
-              <img className="m-auto w-[1.25vw]" src={source + item.link} alt="" />
+              <img
+                className="m-auto w-[1.25vw] max-w-[80px]"
+                src={source + item.link}
+                alt=""
+              />
               <div className="absolute m-auto -inset-2 rounded-lg bg-gradient-to-b from-back to-accent opacity-[20%] blur" />
             </div>
           );

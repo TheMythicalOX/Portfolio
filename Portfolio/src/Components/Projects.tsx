@@ -5,7 +5,7 @@ import ConstellationBox from "./Parts/ConstellationBox";
 const IP = import.meta.env.VITE_API_SERVER_IP;
 const source = `http://${IP}:3000/src/Assets/`;
 
-const iconStyle = `w-[4vw] p-2`;
+const iconStyle = `w-[4vw] max-w-[80px] p-2`;
 
 const projectBox = ` h-[24%] cursor-none w-full cursor-none flex justify-around`;
 const projectBack = `w-[55%] cursor-none hover:scale-[110%] transition-all duration-500`;

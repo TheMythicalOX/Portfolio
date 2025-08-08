@@ -46,10 +46,6 @@
     rgba(0, 0, 0, 0) 34%
   );
 }
-.test2 {
-  background: #f8ca85b6;
-  background: linear-gradient(0deg, #f8ca85b6 0%, rgba(0, 0, 0, 1) 29%);
-}
 .nameBlur {
   filter: drop-shadow(03px 0px 15px var(--color-accent));
 }
