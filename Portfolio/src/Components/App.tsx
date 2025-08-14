@@ -34,29 +34,29 @@ export function useWindowDimensions() {
 function App() {
   const { width, height } = useWindowDimensions();
 
-  let portBox = ``;
-  let mainBox = ``;
-  let secBox = ``;
-  let triBox = ``;
+  let portBox = `relative h-full `;
+  let mainBox = `h-fit text-pritext absolute top-0 z-50 `;
+  let secBox = `h-fit flex justify-center `;
+  let triBox = `w-[85%] relative h-fit flex flex-wrap m-auto `;
 
   if (height >= 850 && width >= 1375) {
     // big screen styles
-    portBox = `relative max-w-[1920px] h-full m-auto`;
-    mainBox = `h-fit top-0 max-w-[1920px] z-50 absolute overflow-x-clip text-pritext `;
-    secBox = `h-fit flex justify-center max-w-[1920px]`;
-    triBox = `w-[85%] relative h-fit flex flex-wrap m-auto`;
-  } else if (height <= 950 || width <= 450 || width <= height) {
+    portBox += `max-w-[1920px] m-auto`;
+    mainBox += `max-w-[1920px] overflow-x-clip`;
+    secBox += `max-w-[1920px]`;
+    triBox += ``;
+  } else if ((height <= 950 && width <= 450) || width <= height) {
     // mobile styles
-    portBox = ``;
-    mainBox = ``;
-    secBox = ``;
-    triBox = ``;
+    portBox += `w-full`;
+    mainBox += ``;
+    secBox += ``;
+    triBox += `overflow-clip`;
   } else {
     // mid screen styles
-    portBox = `relative w-full h-full`;
-    mainBox = `h-fit text-pritext absolute top-0 z-50`;
-    secBox = `h-fit flex justify-center max-w-[1920px]`;
-    triBox = `w-[85%] overflow-clip relative h-fit flex flex-wrap m-auto`;
+    portBox += `w-full`;
+    mainBox += ``;
+    secBox += `max-w-[1920px]`;
+    triBox += `overflow-clip`;
   }
 
   return (
