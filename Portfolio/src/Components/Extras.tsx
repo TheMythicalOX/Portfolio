@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useWindowDimensions } from "./App";
 const IP = import.meta.env.VITE_API_SERVER_IP;
-const star = `http://${IP}:3000/src/Assets/star.svg`;
-const source = `http://${IP}:3000/src/Assets/`;
+const star = `http://${IP}/src/Assets/star.svg`;
+const source = `http://${IP}/src/Assets/`;
 
 const Extras = () => {
   const { width, height } = useWindowDimensions();
