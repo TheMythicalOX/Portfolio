@@ -46,7 +46,7 @@ services:
 
   openvscode-server:
     image: lscr.io/linuxserver/openvscode-server:latest
-    container_name: openvscode-server
+    container_name: openvscode-server-portfolio
     environment:
       - PUID=1000
       - PGID=1000
