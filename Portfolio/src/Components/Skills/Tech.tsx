@@ -25,7 +25,7 @@ const Tech = () => {
   }
 
   const IP = import.meta.env.VITE_API_SERVER_IP;
-  const source = `http://${IP}:3000/src/Assets/`;
+  const source = `http://${IP}/src/Assets/`;
   const techs = [
     { name: "React", link: `react.svg` },
     { name: "TypeScript", link: `typescript-icon.svg` },
