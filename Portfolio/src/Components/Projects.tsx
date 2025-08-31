@@ -65,7 +65,7 @@ const Projects = () => {
           viewport={{ once: false, amount: 0.2 }}
           className={projectBox}
         >
-          <a href="#" className={projectBack}>
+          <a href="https://swtc.online" className={projectBack}>
             <div className={projectCard}>
               <ConstellationBox />
               <img
@@ -209,7 +209,7 @@ const Projects = () => {
               pariatur blanditiis?
             </p>
           </motion.div>
-          <a href="#" className={projectBack}>
+          <a href="https://bugtrack.elijahcline.dev" className={projectBack}>
             <div className={projectCard}>
               <ConstellationBox />
               <img
@@ -227,7 +227,7 @@ const Projects = () => {
           viewport={{ once: false, amount: 0.2 }}
           className={projectBox}
         >
-          <a href="#" className={projectBack}>
+          <a href="https://weather.elijahcline.dev" className={projectBack}>
             <div className={projectCard}>
               <ConstellationBox />
               <img

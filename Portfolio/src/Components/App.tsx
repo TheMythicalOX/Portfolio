@@ -34,7 +34,7 @@ export function useWindowDimensions() {
 function App() {
   const { width, height } = useWindowDimensions();
 
-  let portBox = `relative h-full `;
+  let portBox = `relative h-full absolute top-0 `;
   let mainBox = `h-fit text-pritext absolute top-0 z-50 `;
   let secBox = `h-fit flex justify-center `;
   let triBox = `w-[85%] relative h-fit flex flex-wrap m-auto `;
@@ -60,17 +60,20 @@ function App() {
   }
 
   return (
-    <div className={portBox}>
-      <OnTop />
-      <Extras />
-      <div className={mainBox}>
-        <div className={secBox}>
-          <div className={triBox}>
-            <Header />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
+    <div className="">
+      {/* <div className="bg-linear-to-tr to-back/100 from-black h-[100vh] w-[100vw] z-2  top-0"></div> */}
+      <div className={portBox}>
+        <OnTop />
+        <Extras />
+        <div className={mainBox}>
+          <div className={secBox}>
+            <div className={triBox}>
+              <Header />
+              <About />
+              <Skills />
+              <Projects />
+              <Contact />
+            </div>
           </div>
         </div>
       </div>

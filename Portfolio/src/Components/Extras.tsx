@@ -43,7 +43,8 @@ const Extras = () => {
           alt="nebula"
         />
       </div>
-      <div className="bg-linear-to-tr to-back/100 from-black h-[100vh] w-[100vw] z-5 absoulute top-0"></div>
+      <div className="h-[100vh] w-[100%] z-5 absoulute top-0"></div>
+      
       <motion.div
         initial={{ scale: 0.5, opacity: 0.01 }}
         whileInView={{ scale: 1, opacity: 1 }}

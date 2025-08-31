@@ -16,7 +16,7 @@ const Header = () => {
 
   let mainBox = `h-[100vh] w-full flex flex-wrap justify-center z-50 `;
   let titleStyle = `text-4xl w-full opacity-[50%] text-center m-auto `;
-  let buttonStyle = `bg-pri/25 cursor-none constellationBox relative shadow-lg shadow-[#555]/50 active:scale-[90%] m-auto group  text-xl rounded-full linkScroll hover:scale-125 transition duration-200 `;
+  let buttonStyle = `bg-pri/25 cursor-none constellationBox relative shadow-lg shadow-[#555]/50 active:scale-[90%] m-auto group p-3 text-xl rounded-full linkScroll hover:scale-125 transition duration-200 `;
   let buttonBox = `flex w-full justify-between `;
   let textStyle = `transition duration-500 group-hover:decoration-accent decoration-underline-none underline `;
   let constName = `h-[15vw] max-h-[300px] m-auto nameBlur linkScroll anidelay`;
@@ -25,7 +25,7 @@ const Header = () => {
     // big screen styles
     mainBox += ``;
     titleStyle += ``;
-    buttonStyle += ``;
+    buttonStyle += `p-5`;
     buttonBox += `flex w-full justify-between `;
     textStyle += ``;
     constName += ``;
