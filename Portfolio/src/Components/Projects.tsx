@@ -65,7 +65,7 @@ const Projects = () => {
           viewport={{ once: false, amount: 0.2 }}
           className={projectBox}
         >
-          <a href="https://swtc.online" className={projectBack}>
+          <a href="https://www.swtc.onl" className={projectBack}>
             <div className={projectCard}>
               <ConstellationBox />
               <img
@@ -214,8 +214,8 @@ const Projects = () => {
               <ConstellationBox />
               <img
                 className={projectImage}
-                src={source + "swtccopy.png"}
-                alt="swtccoppy"
+                src={source + "bugtrack.png"}
+                alt="bugtrack"
               />
             </div>
           </a>
@@ -232,8 +232,8 @@ const Projects = () => {
               <ConstellationBox />
               <img
                 className={projectImage}
-                src={source + "swtccopy.png"}
-                alt="swtccoppy"
+                src={source + "weather.png"}
+                alt="weather"
               />
             </div>
           </a>
