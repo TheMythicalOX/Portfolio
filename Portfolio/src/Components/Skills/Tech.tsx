@@ -44,6 +44,7 @@ const Tech = () => {
     { name: "Linux", link: `linux-tux.svg` },
     { name: "Windows", link: `microsoft-windows-icon.svg` },
     { name: "VMWare", link: `vmware.svg` },
+    { name: "Proxmox", link: `proxmox.svg` },
     { name: "VSCode", link: `visual-studio-code.svg` },
     { name: "Visual Studio", link: `visual-studio.svg` },
   ];

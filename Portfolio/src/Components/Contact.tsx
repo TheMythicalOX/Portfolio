@@ -65,10 +65,9 @@ const Contact = () => {
           />
         </div>
         <div className="m-auto w-full p-5">
-          <h2 className="inline p-5">Body Text</h2>
-          <input
+          <h2 className="inline p-5">Message</h2>
+          <textarea
             className="cursor-none outline outline-pritext/20 p-2"
-            type="text"
             placeholder="Hello, my name is..."
             title="Text"
             value={useText}
