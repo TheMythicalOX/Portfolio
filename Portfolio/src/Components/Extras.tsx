@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useWindowDimensions } from "./App";
 const IP = import.meta.env.VITE_API_SERVER_IP;
-const star = `http://${IP}/src/Assets/star.svg`;
-const source = `http://${IP}/src/Assets/`;
+const star = `https://${IP}/src/Assets/star.svg`;
+const source = `https://${IP}/src/Assets/`;
 
 const Extras = () => {
   const { width, height } = useWindowDimensions();
@@ -44,7 +44,7 @@ const Extras = () => {
         />
       </div>
       <div className="h-[100vh] w-[100%] z-5 absoulute top-0"></div>
-      
+
       <motion.div
         initial={{ scale: 0.5, opacity: 0.01 }}
         whileInView={{ scale: 1, opacity: 1 }}

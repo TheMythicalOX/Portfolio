@@ -4,7 +4,7 @@ import ConstellationBox from "./Parts/ConstellationBox";
 import { useWindowDimensions } from "./App";
 
 const IP = import.meta.env.VITE_API_SERVER_IP;
-const source = `http://${IP}/src/Assets/`;
+const source = `https://${IP}/src/Assets/`;
 
 const Projects = () => {
   const { width, height } = useWindowDimensions();
@@ -279,13 +279,13 @@ const Projects = () => {
               pariatur blanditiis?
             </p>
           </motion.div>
-          <a href="#" className={projectBack}>
+          <a href="https://topblog.elijahcline.dev" className={projectBack}>
             <div className={projectCard}>
               <ConstellationBox />
               <img
                 className={projectImage}
-                src={source + "swtccopy.png"}
-                alt="swtccoppy"
+                src={source + "topblog.png"}
+                alt="topblog"
               />
             </div>
           </a>

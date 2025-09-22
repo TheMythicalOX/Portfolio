@@ -4,12 +4,12 @@ import { motion } from "motion/react";
 import { useWindowDimensions } from "./App";
 
 const IP = import.meta.env.VITE_API_SERVER_IP;
-const E = `http://${IP}/src/Assets/E.svg`;
-const L = `http://${IP}/src/Assets/L.svg`;
-const I = `http://${IP}/src/Assets/I.svg`;
-const J = `http://${IP}/src/Assets/J.svg`;
-const A = `http://${IP}/src/Assets/A.svg`;
-const H = `http://${IP}/src/Assets/H.svg`;
+const E = `https://${IP}/src/Assets/E.svg`;
+const L = `https://${IP}/src/Assets/L.svg`;
+const I = `https://${IP}/src/Assets/I.svg`;
+const J = `https://${IP}/src/Assets/J.svg`;
+const A = `https://${IP}/src/Assets/A.svg`;
+const H = `https://${IP}/src/Assets/H.svg`;
 
 const Header = () => {
   const { width, height } = useWindowDimensions();

@@ -1,16 +1,32 @@
 import React, { useState } from "react";
 import ConstellationBox from "./Parts/ConstellationBox";
 import { useWindowDimensions } from "./App";
-
 const Contact = () => {
+  const [useName, setName] = useState("");
   const [useEmail, setEmail] = useState("");
-  const [useSubject, setSubject] = useState("");
-  const [useText, setText] = useState("");
+  const [useMessage, setMessage] = useState("");
 
-  const handleSubmit = () => {
-    setEmail("");
-    setSubject("");
-    setText("");
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch(
+        `https://elijahcline.dev/api?name=${useName}&email=${useEmail}&subject=${"Hello World!"}&message=${useMessage}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.ok) {
+        console.log("ok");
+      } else {
+        console.log("error");
+      }
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const { width, height } = useWindowDimensions();
@@ -39,28 +55,28 @@ const Contact = () => {
         className="z-50 relative h-[80%] w-[80%] p-10 flex flex-wrap m-auto text-center"
       >
         <div className="m-auto w-full p-5">
-          <h2 className="inline p-5">Email</h2>
+          <h2 className="inline p-5">Name</h2>
           <input
             className="cursor-none outline outline-pritext/20 p-2"
-            type="email"
-            placeholder="email@example.com"
-            title="Email"
-            value={useEmail}
+            type="text"
+            placeholder="John Smith"
+            title="name"
+            value={useName}
             onChange={(e) => {
-              setEmail(e.target.value);
+              setName(e.target.value);
             }}
           />
         </div>
         <div className="m-auto w-full p-5">
-          <h2 className="inline p-5">Subject</h2>
+          <h2 className="inline p-5">Email</h2>
           <input
             className="cursor-none outline outline-pritext/20 p-2"
-            type="text"
+            type="email"
             placeholder="Potential Oportunity..."
-            title="Subject"
-            value={useSubject}
+            title="email"
+            value={useEmail}
             onChange={(e) => {
-              setSubject(e.target.value);
+              setEmail(e.target.value);
             }}
           />
         </div>
@@ -69,10 +85,10 @@ const Contact = () => {
           <textarea
             className="cursor-none outline outline-pritext/20 p-2"
             placeholder="Hello, my name is..."
-            title="Text"
-            value={useText}
+            title="message"
+            value={useMessage}
             onChange={(e) => {
-              setText(e.target.value);
+              setMessage(e.target.value);
             }}
           />
         </div>

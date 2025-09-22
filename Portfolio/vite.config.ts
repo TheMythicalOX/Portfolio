@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     host: true,
-    origin: "http://elijahcline.dev:3000",
+    origin: "https://elijahcline.dev",
     port: 3000,
     strictPort: true,
   },
