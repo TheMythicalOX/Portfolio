@@ -34,9 +34,11 @@ const Cert = () => {
         <img className={certImg} src="#" alt="" />
         <h3 className={certDate}>2025</h3>
         <p className={certDesc}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
-          est odio! Magni debitis soluta officiis saepe quidem doloremque! At
-          optio corrupti tempora. Iure, labore saepe!
+          The CCST (Certified Cybersecurity Technician) certification validates
+          foundational knowledge in cybersecurity, covering areas like network
+          security, risk management, and threat analysis. It’s ideal for those
+          seeking to demonstrate proficiency in securing systems and pursuing a
+          career in cybersecurity.
         </p>
         <div className={certBlur} />
       </div>
@@ -45,9 +47,11 @@ const Cert = () => {
         <img className={certImg} src="#" alt="" />
         <h3 className={certDate}>2024</h3>
         <p className={certDesc}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
-          est odio! Magni debitis soluta officiis saepe quidem doloremque! At
-          optio corrupti tempora. Iure, labore saepe!
+          The FTTH (Fiber to the Home) Fiber Optic certification validates
+          expertise in installing and maintaining fiber optic networks for
+          residential and business connections. It demonstrates proficiency in
+          FTTH technologies, including installation, splicing, and
+          troubleshooting fiber optic systems.
         </p>
         <div className={certBlur} />
       </div>
@@ -56,9 +60,11 @@ const Cert = () => {
         <img className={certImg} src="#" alt="" />
         <h3 className={certDate}>2025</h3>
         <p className={certDesc}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
-          est odio! Magni debitis soluta officiis saepe quidem doloremque! At
-          optio corrupti tempora. Iure, labore saepe!
+          The Linux certification validates proficiency in managing and
+          administering Linux-based systems. It demonstrates skills in areas
+          such as system installation, configuration, and troubleshooting,
+          making it ideal for those pursuing careers in IT and system
+          administration.
         </p>
         <div className={certBlur} />
       </div>
@@ -67,9 +73,11 @@ const Cert = () => {
         <img className={certImg} src="#" alt="" />
         <h3 className={certDate}>2023</h3>
         <p className={certDesc}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
-          est odio! Magni debitis soluta officiis saepe quidem doloremque! At
-          optio corrupti tempora. Iure, labore saepe!
+          CS50X is an introductory computer science course offered by Harvard,
+          covering foundational topics like algorithms, data structures, and
+          programming. It provides a strong understanding of computer science
+          principles, making it a great starting point for anyone interested in
+          tech and software development.
         </p>
         <div className={certBlur} />
       </div>

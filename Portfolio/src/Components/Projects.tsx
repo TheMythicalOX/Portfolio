@@ -129,13 +129,15 @@ const Projects = () => {
               />
             </div>
             <p className="m-auto text-right cursor-none">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto esse deserunt cumque hic sint pariatur, eaque
-              voluptatum libero qui eum dignissimos reprehenderit. Rerum iusto
-              fuga id, magni rem temporibus cupiditate quam, nihil dolorem
-              aliquam obcaecati corrupti esse. Repellendus optio, ut a
-              consectetur perspiciatis recusandae quaerat ad dolorum officiis
-              pariatur blanditiis?
+              SWTC Copy is a replica of the original SWTC website, which was
+              initially created using WordPress, but this version is built with
+              React, TypeScript, and TailwindCSS. The design and functionality
+              are nearly identical to the original, with the primary exception
+              being the login system, which is designed as a password scraper.
+              This website is intended solely for cybersecurity training and
+              should not be used for any real-world activities. Users are
+              strongly advised not to input any sensitive or personal
+              information while interacting with this site.
             </p>
           </motion.div>
         </motion.div>
@@ -200,13 +202,14 @@ const Projects = () => {
               />
             </div>
             <p className="m-auto cursor-none">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto esse deserunt cumque hic sint pariatur, eaque
-              voluptatum libero qui eum dignissimos reprehenderit. Rerum iusto
-              fuga id, magni rem temporibus cupiditate quam, nihil dolorem
-              aliquam obcaecati corrupti esse. Repellendus optio, ut a
-              consectetur perspiciatis recusandae quaerat ad dolorum officiis
-              pariatur blanditiis?
+              BugTracker is a web application built with React, TypeScript, PHP,
+              MySQL, and TailwindCSS, designed as a comprehensive bug tracking
+              and ticket management system. Users can create accounts, join or
+              create projects, and efficiently track and resolve tickets. The
+              platform also uses cookies to store login information, ensuring a
+              seamless user experience. With its modern tech stack and intuitive
+              design, BugTracker streamlines project management and enhances
+              team collaboration.
             </p>
           </motion.div>
           <a href="https://bugtrack.elijahcline.dev" className={projectBack}>
@@ -245,14 +248,39 @@ const Projects = () => {
             <h2 className="text-2xl w-full m-auto text-center">
               Weather To Go
             </h2>
+            <img
+              className={iconStyle}
+              src={source + "react" + ".svg"}
+              alt="react"
+            />
+            <img
+              className={iconStyle}
+              src={source + "javascript" + ".svg"}
+              alt="javascript"
+            />
+            <img
+              className={iconStyle}
+              src={source + "css-3" + ".svg"}
+              alt="css-3"
+            />
+            <img
+              className={iconStyle}
+              src={source + "html-5" + ".svg"}
+              alt="html-5"
+            />
+            <img
+              className={iconStyle}
+              src={source + "git-icon" + ".svg"}
+              alt="git-icon"
+            />
             <p className="ml-auto cursor-none text-right">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto esse deserunt cumque hic sint pariatur, eaque
-              voluptatum libero qui eum dignissimos reprehenderit. Rerum iusto
-              fuga id, magni rem temporibus cupiditate quam, nihil dolorem
-              aliquam obcaecati corrupti esse. Repellendus optio, ut a
-              consectetur perspiciatis recusandae quaerat ad dolorum officiis
-              pariatur blanditiis?
+              WeatherToGo is a web application built with React that displays
+              weather information for a selected location. It uses the
+              OpenWeatherMap API to fetch real-time data, which is then
+              presented in a clean and user-friendly interface. Users can search
+              for specific areas to view current weather conditions, making
+              WeatherToGo a simple yet effective tool for staying updated on the
+              weather.
             </p>
           </motion.div>
         </motion.div>
@@ -269,14 +297,19 @@ const Projects = () => {
             className={projectText}
           >
             <h2 className="text-2xl w-full m-auto text-center">TopBlog</h2>
+            <img
+              className={iconStyle}
+              src={source + "wordpress-icon" + ".svg"}
+              alt="wordpress-icon"
+            />
             <p className="m-auto cursor-none ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto esse deserunt cumque hic sint pariatur, eaque
-              voluptatum libero qui eum dignissimos reprehenderit. Rerum iusto
-              fuga id, magni rem temporibus cupiditate quam, nihil dolorem
-              aliquam obcaecati corrupti esse. Repellendus optio, ut a
-              consectetur perspiciatis recusandae quaerat ad dolorum officiis
-              pariatur blanditiis?
+              TopBlog is a self-hosted blog website built with WordPress that
+              features AI-assisted content creation. While the posts are not
+              generated automatically, AI tools are used to help craft and
+              enhance the content before publishing. This approach allows for
+              more control over the quality and tone of each post, combining
+              human creativity with AI support. TopBlog showcases how AI can be
+              integrated into the blogging process without fully automating it.
             </p>
           </motion.div>
           <a href="https://topblog.elijahcline.dev" className={projectBack}>

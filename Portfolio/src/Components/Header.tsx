@@ -75,25 +75,34 @@ const Header = () => {
           <ConstellationRounded />
           <div className={textStyle}>GitHub</div>
         </a>
-        <a className={buttonStyle + " anidelay2"} href="#">
+        <a className={buttonStyle + " anidelay2"} href="https://swtc.onl">
           <ConstellationRounded />
-          <div className={textStyle}>other1</div>
+          <div className={textStyle}>SWTC Copy</div>
         </a>
-        <a className={buttonStyle + " anidelay3"} href="#">
+        <a
+          className={buttonStyle + " anidelay3"}
+          href="https://bugtrack.elijahcline.dev"
+        >
           <ConstellationRounded />
-          <div className={textStyle}>other2</div>
+          <div className={textStyle}>Bug Tracker</div>
         </a>
-        <a className={buttonStyle + " anidelay4"} href="#">
+        <a
+          className={buttonStyle + " anidelay4"}
+          href="https://weather.elijahcline.dev"
+        >
           <ConstellationRounded />
-          <div className={textStyle}>other3</div>
+          <div className={textStyle}>Weather To Go</div>
         </a>
-        <a className={buttonStyle + " anidelay5"} href="#">
+        <a
+          className={buttonStyle + " anidelay5"}
+          href="https://topblog.elijahcline.dev"
+        >
           <ConstellationRounded />
-          <div className={textStyle}>other4</div>
+          <div className={textStyle}>TopBlog</div>
         </a>
-        <a className={buttonStyle + " anidelay6"} href="#">
+        <a className={buttonStyle + " anidelay6"} href="/#contact">
           <ConstellationRounded />
-          <div className={textStyle}>other5</div>
+          <div className={textStyle}>Contact</div>
         </a>
       </div>
     </motion.div>
