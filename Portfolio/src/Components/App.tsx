@@ -37,26 +37,26 @@ function App() {
   let portBox = `relative h-full absolute top-0 `;
   let mainBox = `h-fit text-pritext absolute top-0 z-50 `;
   let secBox = `h-fit flex justify-center `;
-  let triBox = `w-[85%] relative h-fit flex flex-wrap m-auto `;
+  let triBox = ` relative h-fit flex flex-wrap m-auto `;
 
   if (height >= 850 && width >= 1375) {
     // big screen styles
     portBox += `max-w-[1920px] m-auto`;
     mainBox += `max-w-[1920px] overflow-x-clip`;
     secBox += `max-w-[1920px]`;
-    triBox += ``;
+    triBox += `w-[85%] `;
   } else if ((height <= 950 && width <= 450) || width <= height) {
     // mobile styles
     portBox += `w-full`;
-    mainBox += ``;
-    secBox += ``;
-    triBox += `overflow-clip`;
+    mainBox += `w-[100vw]`;
+    secBox += `max-w-[100vw] overflow-clip`;
+    triBox += `max-w-[100vw] overflow-clip`;
   } else {
     // mid screen styles
-    portBox += `w-full`;
+    portBox += ``;
     mainBox += ``;
     secBox += `max-w-[1920px]`;
-    triBox += `overflow-clip`;
+    triBox += `w-[85%] overflow-clip`;
   }
 
   return (

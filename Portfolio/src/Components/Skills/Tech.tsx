@@ -9,17 +9,17 @@ const Tech = () => {
 
   if (height >= 850 && width >= 1375) {
     // big screen styles
-    mainBox = `h-[30%] w-full flex flex-wrap z-50 justify-around`;
+    mainBox = `w-full flex flex-wrap z-50 justify-around`;
     titleStyle = `m-auto w-full text-4xl pb-10 text-center`;
     itemsBox = `flex flex-wrap cursor-none justify-around gap-20`;
   } else if (height <= 950 || width <= 450 || width <= height) {
     // mobile styles
-    mainBox = `h-[30%] w-full flex flex-wrap z-50 justify-around`;
-    titleStyle = `m-auto w-full text-4xl pb-10 text-center`;
-    itemsBox = `flex flex-wrap cursor-none justify-around gap-20`;
+    mainBox = ` w-full flex flex-wrap z-50 justify-around`;
+    titleStyle = `m-auto w-full text-2xl pb-10 text-center`;
+    itemsBox = `flex flex-wrap cursor-none gap-2`;
   } else {
     // mid screen styles
-    mainBox = `h-[30%] w-full flex flex-wrap z-50 justify-around`;
+    mainBox = `w-full flex flex-wrap z-50 justify-around`;
     titleStyle = `m-auto w-full text-4xl pb-20 text-center`;
     itemsBox = `flex flex-wrap cursor-none justify-around gap-20`;
   }

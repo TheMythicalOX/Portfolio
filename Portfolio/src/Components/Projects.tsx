@@ -9,7 +9,7 @@ const source = `https://${IP}/src/Assets/`;
 const Projects = () => {
   const { width, height } = useWindowDimensions();
 
-  let mainBox = ``;
+  let mainBox = `w-full py-14 cursor-none flex flex-wrap z-25 `;
   let titleStyle = ``;
   let boxBox = ``;
   let iconStyle = ``;
@@ -21,37 +21,37 @@ const Projects = () => {
 
   if (height >= 850 && width >= 1375) {
     // big screen styles
-    mainBox = `h-[350vh] w-full pb-14 cursor-none flex flex-wrap z-25`;
-    titleStyle = `m-auto text-center w-full pb-10 text-4xl`;
-    boxBox = `flex flex-wrap cursor-none w-full h-full p-2`;
-    iconStyle = `w-[4vw] max-w-[80px] p-2`;
-    projectBox = `h-[24%] cursor-none w-full cursor-none flex justify-around`;
-    projectBack = `w-[55%] cursor-none hover:scale-[110%] transition-all duration-500`;
-    projectText = `w-[30%] cursor-none flex flex-wrap justify-between m-auto `;
-    projectCard = `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
-    projectImage = `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
+    mainBox += `h-[350vh] `;
+    titleStyle += `m-auto text-center w-full pb-10 text-4xl`;
+    boxBox += `flex flex-wrap cursor-none w-full h-full p-2`;
+    iconStyle += `w-[4vw] max-w-[80px] p-2`;
+    projectBox += `h-[24%] cursor-none w-full cursor-none flex justify-around`;
+    projectBack += `w-[55%] cursor-none hover:scale-[110%] transition-all duration-500`;
+    projectText += `w-[30%] cursor-none flex flex-wrap justify-between m-auto `;
+    projectCard += `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
+    projectImage += `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
   } else if (height <= 950 || width <= 450 || width <= height) {
     // mobile styles
-    mainBox = `h-[350vh] w-full pb-14 cursor-none flex flex-wrap z-25`;
-    titleStyle = `m-auto text-center w-full pb-10 text-4xl`;
-    boxBox = `flex flex-wrap cursor-none w-full h-full p-2`;
-    iconStyle = `w-[4vw] max-w-[80px] p-2`;
-    projectBox = `h-[24%] cursor-none w-full cursor-none flex justify-around`;
-    projectBack = `w-[55%] cursor-none hover:scale-[110%] transition-all duration-500`;
-    projectText = `w-[30%] cursor-none flex flex-wrap justify-between m-auto `;
-    projectCard = `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
-    projectImage = `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
+    mainBox += `h-[350vh] max-w-[100vw] overflow-clip`;
+    titleStyle += `m-auto text-center w-full pb-10 text-4xl`;
+    boxBox += `flex flex-wrap cursor-none w-full h-full p-2`;
+    iconStyle += `w-[4vw] max-w-[80px] p-2`;
+    projectBox += `h-[24%] cursor-none w-full cursor-none flex justify-around`;
+    projectBack += `w-[55%] cursor-none hover:scale-[110%] transition-all duration-500`;
+    projectText += `w-[30%] cursor-none flex flex-wrap justify-between m-auto `;
+    projectCard += `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
+    projectImage += `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
   } else {
     // mid screen styles
-    mainBox = `h-[500vh] w-full pb-14 cursor-none flex flex-wrap z-25`;
-    titleStyle = `m-auto text-center w-full pb-10 text-4xl`;
-    boxBox = `flex flex-wrap cursor-none w-full h-full p-2`;
-    iconStyle = `w-[6vw] max-w-[80px] p-2`;
-    projectBox = `h-[24%] cursor-none w-full cursor-none flex flex-wrap justify-around`;
-    projectBack = `w-[100%] h-[75%] cursor-none hover:scale-[110%] transition-all duration-500`;
-    projectText = `w-[100%] p-10 cursor-none flex flex-wrap justify-between m-auto `;
-    projectCard = `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
-    projectImage = `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
+    mainBox += `h-[500vh] `;
+    titleStyle += `m-auto text-center w-full pb-10 text-4xl`;
+    boxBox += `flex flex-wrap cursor-none w-full h-full p-2`;
+    iconStyle += `w-[6vw] max-w-[80px] p-2`;
+    projectBox += `h-[24%] cursor-none w-full cursor-none flex flex-wrap justify-around`;
+    projectBack += `w-[100%] h-[75%] cursor-none hover:scale-[110%] transition-all duration-500`;
+    projectText += `w-[100%] p-10 cursor-none flex flex-wrap justify-between m-auto `;
+    projectCard += `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
+    projectImage += `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
   }
 
   return (

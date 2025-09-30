@@ -31,15 +31,15 @@ const Header = () => {
     constName += ``;
   } else if (height <= 950 || width <= 450 || width <= height) {
     // mobile styles
-    mainBox += ``;
+    mainBox += ` mt-10`;
     titleStyle += ``;
-    buttonStyle += `p-5`;
-    buttonBox += `flex w-full justify-between `;
-    textStyle += ``;
-    constName += ``;
+    buttonStyle += `p-0 m-2 `;
+    buttonBox += `flex w-full flex-wrap justify-between `;
+    textStyle += ` `;
+    constName += ` w-[10vw]`;
   } else {
     // mid screen styles
-    mainBox += ``;
+    mainBox += ` `;
     titleStyle += ``;
     buttonStyle += `p-3 w-[12%] text-center`;
     buttonBox += `m-auto`;
@@ -54,7 +54,7 @@ const Header = () => {
         whileInView={{ opacity: 0.6 }}
         transition={{ duration: 5, ease: "easeInOut" }}
         viewport={{ once: true, amount: 0 }}
-        className="flex w-[70%] m-auto justify-around "
+        className="flex w-[80%] m-auto justify-around "
       >
         <img src={E} alt="" className={constName + "2"} />
         <img src={L} alt="" className={constName + "3"} />
