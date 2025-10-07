@@ -45,8 +45,8 @@ const Contact = () => {
     mainBox += `w-[60%]`;
     mainTitle += ``;
     formBox += `p-10`;
-    inputTitle += `p-5  w-[20%]`;
-    inputStyle += `text-right p-5  w-[80%]`;
+    inputTitle += `text-right p-5  w-[20%]`;
+    inputStyle += ` p-5  w-[80%]`;
     inputBox += `p-5 `;
     buttonBox += ``;
     buttonStyle += ``;
@@ -55,7 +55,7 @@ const Contact = () => {
     mainBox += `w-[90%]`;
     mainTitle += ``;
     formBox += `p-2`;
-    inputTitle += `p-1 w-[100%]`;
+    inputTitle += `text-left p-1 w-[100%]`;
     inputStyle += `text-left text-sm p-1 w-[100%]`;
     inputBox += `p-1 flex-wrap`;
     buttonBox += ``;
@@ -65,8 +65,8 @@ const Contact = () => {
     mainBox += `w-[95%]`;
     mainTitle += ``;
     formBox += `p-10`;
-    inputTitle += `p-5  w-[20%]`;
-    inputStyle += `text-rightp-5  w-[80%]`;
+    inputTitle += `text-right p-5  w-[20%]`;
+    inputStyle += `p-5  w-[80%]`;
     inputBox += `p-5 `;
     buttonBox += ``;
     buttonStyle += ``;
