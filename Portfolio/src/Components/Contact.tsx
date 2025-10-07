@@ -5,11 +5,12 @@ const Contact = () => {
   const [useName, setName] = useState("");
   const [useEmail, setEmail] = useState("");
   const [useMessage, setMessage] = useState("");
+  const [useSentEmail, setSentEmail] = useState(false);
 
   const handleSubmit = async () => {
     try {
       const response = await fetch(
-        `https://elijahcline.dev/api?name=${useName}&email=${useEmail}&subject=${"Hello World!"}&message=${useMessage}`,
+        `https://elijahcline.dev/api?name=${useName}&email=${useEmail}&subject=${"Hello!"}&message=${useMessage}`,
         {
           method: "GET",
           headers: {
@@ -20,6 +21,10 @@ const Contact = () => {
 
       if (response.ok) {
         console.log("ok");
+        setSentEmail(true);
+        setName("");
+        setEmail("");
+        setMessage("");
       } else {
         console.log("error");
       }
@@ -39,6 +44,8 @@ const Contact = () => {
   let inputBox = `m-auto flex w-[100%] `;
   let buttonBox = `w-full flex m-auto pb-10 `;
   let buttonStyle = `bg-back/20 cursor-none constellationBox shadow-lg shadow-[#555]/50 active:scale-[90%] m-auto py-3 px-14 group text-xl rounded-full linkScroll hover:decoration-accent decoration-underline-none underline hover:scale-125 transition duration-200 `;
+  let emailSentBox = `m-auto flex flex-wrap `;
+  let emailSentText = `w-full m-auto text-center text-2xl `;
 
   if (height >= 850 && width >= 1375) {
     // big screen styles
@@ -50,6 +57,8 @@ const Contact = () => {
     inputBox += `p-5 `;
     buttonBox += ``;
     buttonStyle += ``;
+    emailSentBox += ``;
+    emailSentText += ``;
   } else if (height <= 950 || width <= 450 || width <= height) {
     // mobile styles
     mainBox += `w-[90%]`;
@@ -60,6 +69,8 @@ const Contact = () => {
     inputBox += `p-1 flex-wrap`;
     buttonBox += ``;
     buttonStyle += ``;
+    emailSentBox += ``;
+    emailSentText += ``;
   } else {
     // mid screen styles
     mainBox += `w-[95%]`;
@@ -70,6 +81,8 @@ const Contact = () => {
     inputBox += `p-5 `;
     buttonBox += ``;
     buttonStyle += ``;
+    emailSentBox += ``;
+    emailSentText += ``;
   }
 
   return (
@@ -117,9 +130,17 @@ const Contact = () => {
         </div>
       </form>
       <div className={buttonBox}>
-        <button onClick={handleSubmit} className={buttonStyle}>
-          Send
-        </button>
+        {!useSentEmail && (
+          <button onClick={handleSubmit} className={buttonStyle}>
+            Send
+          </button>
+        )}
+        {useSentEmail && (
+          <div className={emailSentBox}>
+            <h2 className={emailSentText}>Email Has Been Sent!</h2>
+            <h2 className={emailSentText}>Thank You!</h2>
+          </div>
+        )}
       </div>
     </div>
   );
