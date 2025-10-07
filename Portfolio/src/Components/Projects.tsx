@@ -18,6 +18,11 @@ const Projects = () => {
   let projectText = ``;
   let projectCard = ``;
   let projectImage = ``;
+  let motionVar = {
+    lx: -500,
+    rx: +500,
+    once: false,
+  };
 
   if (height >= 850 && width >= 1375) {
     // big screen styles
@@ -32,15 +37,20 @@ const Projects = () => {
     projectImage += `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
   } else if (height <= 950 || width <= 450 || width <= height) {
     // mobile styles
-    mainBox += `h-[350vh] max-w-[100vw] overflow-clip`;
+    mainBox += ` max-w-[100vw] overflow-clip`;
     titleStyle += `m-auto text-center w-full pb-10 text-4xl`;
     boxBox += `flex flex-wrap cursor-none w-full h-full p-2`;
-    iconStyle += `w-[4vw] max-w-[80px] p-2`;
-    projectBox += `h-[24%] cursor-none w-full cursor-none flex justify-around`;
-    projectBack += `w-[55%] cursor-none hover:scale-[110%] transition-all duration-500`;
-    projectText += `w-[30%] cursor-none flex flex-wrap justify-between m-auto `;
+    iconStyle += `w-[6.5vw] p-2`;
+    projectBox += `h-fit cursor-none w-full pb-5 cursor-none flex flex-wrap justify-around`;
+    projectBack += `w-[100%] h-[100vw] cursor-none hover:scale-[110%] transition-all duration-500`;
+    projectText += `w-[100%] pb-2 cursor-none flex flex-wrap justify-between m-auto text-sm `;
     projectCard += `cursor-none group h-[90%] relative constellationBox relative w-[95%] group-hover:w-[60%] flex m-auto group-hover:opacity-[0.5] opacity-[1] group-hover:h-[20%] transition-all duration-500`;
     projectImage += `object-cover opacity-[75%] group-hover:opacity-[100%] absolute w-full h-full transition-all duration-500`;
+    motionVar = {
+      lx: 0,
+      rx: 0,
+      once: true,
+    };
   } else {
     // mid screen styles
     mainBox += `h-[500vh] `;
@@ -59,10 +69,10 @@ const Projects = () => {
       <h1 className={titleStyle}>Projects</h1>
       <div className={boxBox}>
         <motion.div
-          initial={{ opacity: 0, x: -500, scale: 0.6 }}
+          initial={{ opacity: 0, x: motionVar.lx, scale: 0.6 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: motionVar.once, amount: 0.2 }}
           className={projectBox}
         >
           <a href="https://www.swtc.onl" className={projectBack}>
@@ -78,6 +88,7 @@ const Projects = () => {
           <motion.div
             initial={{ opacity: 0, x: 0, scale: 0.6 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: motionVar.once }}
             className={projectText}
           >
             <h2 className="text-2xl w-full m-auto text-center">SWTC Copy</h2>
@@ -142,15 +153,16 @@ const Projects = () => {
           </motion.div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: +500, scale: 0.6 }}
+          initial={{ opacity: 0, x: motionVar.rx, scale: 0.6 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: motionVar.once, amount: 0.2 }}
           className={projectBox}
         >
           <motion.div
             initial={{ opacity: 0, x: 0, scale: 0.6 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: motionVar.once }}
             className={projectText}
           >
             <h2 className="text-2xl w-full m-auto text-center">Bug Tracker</h2>
@@ -224,10 +236,10 @@ const Projects = () => {
           </a>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: -500, scale: 0.6 }}
+          initial={{ opacity: 0, x: motionVar.lx, scale: 0.6 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: motionVar.once, amount: 0.2 }}
           className={projectBox}
         >
           <a href="https://weather.elijahcline.dev" className={projectBack}>
@@ -243,6 +255,7 @@ const Projects = () => {
           <motion.div
             initial={{ opacity: 0, x: 0, scale: 0.6 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: motionVar.once }}
             className={projectText}
           >
             <h2 className="text-2xl w-full m-auto text-center">
@@ -285,15 +298,16 @@ const Projects = () => {
           </motion.div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: +500, scale: 0.6 }}
+          initial={{ opacity: 0, x: motionVar.rx, scale: 0.6 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: motionVar.once, amount: 0.2 }}
           className={projectBox}
         >
           <motion.div
             initial={{ opacity: 0, x: 0, scale: 0.6 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: motionVar.once }}
             className={projectText}
           >
             <h2 className="text-2xl w-full m-auto text-center">TopBlog</h2>

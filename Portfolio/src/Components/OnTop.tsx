@@ -50,10 +50,10 @@ const OnTop = () => {
           <h1 className="m-auto text-center text-pritext px-5 z-50">Contact</h1>
         </div>
       </a>
-      <div className="fixed">
+      {/* <div className="fixed">
         <div className="text-white">{height}</div>
         <div className="text-white">{width}</div>
-      </div>
+      </div> */}
       <div
         className={mouseInner}
         style={{

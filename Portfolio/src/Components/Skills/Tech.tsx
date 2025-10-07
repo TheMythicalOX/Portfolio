@@ -6,22 +6,26 @@ const Tech = () => {
   let mainBox = ``;
   let titleStyle = ``;
   let itemsBox = ``;
+  let iconStyle = `m-auto `;
 
   if (height >= 850 && width >= 1375) {
     // big screen styles
     mainBox = `w-full flex flex-wrap z-50 justify-around`;
     titleStyle = `m-auto w-full text-4xl pb-10 text-center`;
     itemsBox = `flex flex-wrap cursor-none justify-around gap-20`;
+    iconStyle += `w-[1.25vw] max-w-[80px]`;
   } else if (height <= 950 || width <= 450 || width <= height) {
     // mobile styles
     mainBox = ` w-full flex flex-wrap z-50 justify-around`;
     titleStyle = `m-auto w-full text-2xl pb-10 text-center`;
     itemsBox = `flex flex-wrap cursor-none gap-2`;
+    iconStyle += `w-[6.5vw]`;
   } else {
     // mid screen styles
     mainBox = `w-full flex flex-wrap z-50 justify-around`;
     titleStyle = `m-auto w-full text-4xl pb-20 text-center`;
     itemsBox = `flex flex-wrap cursor-none justify-around gap-20`;
+    iconStyle += `w-[1.25vw] max-w-[80px]`;
   }
 
   const IP = import.meta.env.VITE_API_SERVER_IP;
@@ -59,11 +63,7 @@ const Tech = () => {
               className="relative constellationBox p-2 flex justify-around m-auto "
             >
               <h2 className="m-auto pr-2">{item.name}</h2>
-              <img
-                className="m-auto w-[1.25vw] max-w-[80px]"
-                src={source + item.link}
-                alt=""
-              />
+              <img className={iconStyle} src={source + item.link} alt="" />
               <div className="absolute m-auto -inset-2 rounded-lg bg-gradient-to-b from-back to-accent opacity-[20%] blur" />
             </div>
           );
